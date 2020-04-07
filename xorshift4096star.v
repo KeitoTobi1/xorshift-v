@@ -12,7 +12,7 @@ pub fn new_xorshift4096shift(seed i64) &XorShift4096Star {
 	return &tmpxs
 }
 
-pub fn (x mut XorShift4096Star) set_seed(set_seed i64) {
+pub fn (x mut XorShift4096Star) set_seed(seed i64) {
 	tmpxs := SplitMix64{}
 	tmpxs.set_seed(seed)
 	for i := 0; i < 64; i++{
